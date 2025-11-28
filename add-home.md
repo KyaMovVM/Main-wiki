@@ -1,0 +1,3 @@
+Установка Gitea по документации
+Отключение защиты systemmd home. `sudo nano /etc/systemd/system/gitea.service`
+Установка сервера NGINX
