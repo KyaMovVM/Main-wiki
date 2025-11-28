@@ -1,0 +1,239 @@
+{
+  "main": {
+    "id": "ca4bc65df11d98a5",
+    "type": "split",
+    "children": [
+      {
+        "id": "4f92cf65c8d5245f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "08fa98f80e9c8505",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "empty",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Новая вкладка"
+            }
+          },
+          {
+            "id": "d59d9a986fbd0277",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "11-oop.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "11-oop"
+            }
+          },
+          {
+            "id": "1a7686a4882486c9",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "new.base",
+                "viewName": "Таблица"
+              },
+              "icon": "lucide-table",
+              "title": "new"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bfd1229baf3c9338",
+    "type": "split",
+    "children": [
+      {
+        "id": "8c46cb0b0406a3df",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a7fa0c76ba9ce6b8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Файловый менеджер"
+            }
+          },
+          {
+            "id": "e349983b5236e273",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Поиск"
+            }
+          },
+          {
+            "id": "f66140f465b4b5d9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Закладки"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a3316cb664435f19",
+    "type": "split",
+    "children": [
+      {
+        "id": "7df2a367853f04cc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3ae994ed9b769489",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Обратные ссылки для README"
+            }
+          },
+          {
+            "id": "ecc13d320fbb9c71",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Исходящие ссылки из README"
+            }
+          },
+          {
+            "id": "9f0cc6afe28db8cd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Теги"
+            }
+          },
+          {
+            "id": "6b3b70681d4fc183",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Структура README"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false,
+      "bases:Создать новую базу": false
+    }
+  },
+  "active": "1a7686a4882486c9",
+  "lastOpenFiles": [
+    "image-1.png",
+    "new.base",
+    "8-render.md",
+    "7-event-loop.md",
+    "3-api.md",
+    "1-overview.md",
+    "13-algoritms.md",
+    "fd",
+    "5-protocols.md",
+    "2-build.md",
+    "Main.code-workspace",
+    "test-node.md",
+    "scripts/runner.sh",
+    "scripts",
+    "Dockerfile",
+    "src/test-node.js",
+    "cleanup.ps1",
+    "11-oop.md",
+    "10-markdown.md",
+    "9-node.md",
+    "6-browser.md",
+    "4-rest.md",
+    "README.md",
+    "12-testing.md",
+    "GEMINI.md",
+    "crazy.md",
+    "lmstudio_models.js",
+    "Pasted image 20251113133809.png",
+    "Pasted image 20251113104527.png",
+    "image3.png",
+    "image 3.png",
+    "image2.png",
+    "EventLoopTest/index.js",
+    "Pasted image 20251113064305.png",
+    "Pasted image 20251113064148.png",
+    "Untitled.md",
+    "Untitled 1.md",
+    "image.png"
+  ]
+}
