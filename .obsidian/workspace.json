@@ -37,13 +37,14 @@
             "id": "1a7686a4882486c9",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "new.base",
-                "viewName": "Таблица"
+                "file": "test-node.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "new"
+              "icon": "lucide-file",
+              "title": "test-node"
             }
           }
         ],
@@ -197,10 +198,11 @@
   },
   "active": "1a7686a4882486c9",
   "lastOpenFiles": [
+    "dev-containers.md",
+    "new.base",
     "idea-submodule.md",
     "fd",
     "image-1.png",
-    "new.base",
     "8-render.md",
     "7-event-loop.md",
     "3-api.md",
