@@ -46,9 +46,21 @@
               "icon": "lucide-file",
               "title": "test-node"
             }
+          },
+          {
+            "id": "c672947823e8c1f7",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.6"
+              },
+              "icon": "lucide-book-up",
+              "title": "примечания к выпуску 1.10.6"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -196,7 +208,7 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "1a7686a4882486c9",
+  "active": "c672947823e8c1f7",
   "lastOpenFiles": [
     "dev-containers.md",
     "new.base",
