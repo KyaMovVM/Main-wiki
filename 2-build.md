@@ -1,4 +1,11 @@
 ```bash
+# Runner daemon starting
+sudo acr_runner daemon
+
+# status gitea
+sudo systemctl status gitea
+
+# depricated
 # Run local CI
 act
 
@@ -7,10 +14,4 @@ docker pull nginx
 
 # VRChat Run tests
 ./Test‑VRChat.sh
-
-# Runner daemon starting
-sudo acr_runner daemon
-
-# status gitea
-sudo systemctl status gitea
 ```

@@ -1,148 +1,207 @@
-KyaMovVM: Можно сразу добавить ссылки на Git репозитории? Чтобы скачав Workspace мы видели сразу 2 репазитория у других.
+# Настройка Git Submodules для Workspace
 
-Workspace: Sure, here's a proposed directory structure for a project app:
+## Обзор
 
+Проект использует структуру с несколькими связанными репозиториями на Gitea:
 
-Create Workspace...
+- **Main** (`main-project/`) — основное приложение
+- **Main.wiki** (`wiki/`) — документация проекта
+- **kyaserver** — монорепозиторий, объединяющий оба репозитория через Git submodules
 
-KyaMovVM: Что-то странное предлагаешь и неполное
+## Структура репозиториев
 
-GitHub Copilot: Коротко — да, можно, но VS Code workspace не хранит удалённые URL напрямую. Рекомендуемые варианты (коротко) и готовые фрагменты:
+```text
+kyaserver/                    # Главный репозиторий
+├── main-project/             # Git submodule → Main
+├── wiki/                     # Git submodule → Main.wiki
+├── .gitmodules               # Конфигурация submodules
+└── kyaserver.code-workspace  # VS Code workspace файл
+```
 
-Варианты
-- Лучший вариант — сделать submodules в корне (git submodule). Тогда при клоне с --recurse-submodules и в workspace будут видны обе папки.
-- Альтернатива — добавить скрипт setup (clone_repos.sh) и README с командами git clone.
-- Также обновить Main.code-workspace, чтобы он включал папки субмодулей (пути относительные).
+## Текущая конфигурация
 
-Примеры файлов, которые можно добавить.
+### Файл `.gitmodules`
 
-````json
+```ini
+[submodule "main-project"]
+    path = main-project
+    url = http://192.168.0.104:3000/KyaMovVM/Main.git
+
+[submodule "wiki"]
+    path = wiki
+    url = http://192.168.0.104:3000/KyaMovVM/Main.wiki.git
+```
+
+### VS Code Workspace (`kyaserver.code-workspace`)
+
+```json
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "main-app-repo"
-		},
-		{
-			"path": "wiki-repo"
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "main-project/Japanese game"
+        }
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "Japanese game"
+    }
 }
-````
+```
 
-````ini
-[submodule "main-app-repo"]
-	path = main-app-repo
-	url = git@gitea.example.com:org/main-app-repo.git
+## Быстрый старт
 
-[submodule "wiki-repo"]
-	path = wiki-repo
-	url = git@gitea.example.com:org/wiki-repo.git
-````
+### 1. Клонирование репозитория с submodules
 
-````bash
+**Рекомендуемый способ** (автоматически инициализирует все submodules):
+
+```bash
+git clone --recurse-submodules http://192.168.0.104:3000/KyaMovVM/kyaserver.git
+cd kyaserver
+```
+
+### 2. Если репозиторий уже клонирован без submodules
+
+```bash
+cd kyaserver
+git submodule update --init --recursive
+```
+
+### 3. Открытие Workspace в VS Code
+
+После клонирования и инициализации submodules откройте файл `kyaserver.code-workspace` в VS Code:
+
+```bash
+code kyaserver.code-workspace
+```
+
+## Работа с Submodules
+
+### Обновление submodules до последних версий
+
+```bash
+# Обновить все submodules до коммитов, указанных в главном репозитории
+git submodule update --remote
+
+# Или обновить конкретный submodule
+git submodule update --remote main-project
+git submodule update --remote wiki
+```
+
+### Добавление нового submodule
+
+Если нужно добавить новый submodule:
+
+```bash
+git submodule add http://192.168.0.104:3000/KyaMovVM/NewRepo.git path/to/new-repo
+git add .gitmodules path/to/new-repo
+git commit -m "Add NewRepo as submodule"
+git push
+```
+
+### Обновление ссылки на submodule
+
+Когда в submodule появились новые коммиты, нужно обновить ссылку в главном репозитории:
+
+```bash
+cd main-project  # или cd wiki
+git checkout main  # или нужная ветка
+git pull
+
+cd ..  # вернуться в корень kyaserver
+git add main-project  # или wiki
+git commit -m "Update submodule to latest version"
+git push
+```
+
+## Важные замечания
+
+1. **Не переименовывайте папки submodules** — это сломает ссылки в `.gitmodules` и workspace файлах.
+
+2. **При клонировании всегда используйте `--recurse-submodules`** или выполняйте `git submodule update --init --recursive` после обычного клона.
+
+3. **Submodules указывают на конкретные коммиты**, а не на ветки. Чтобы обновить submodule до последней версии, используйте `git submodule update --remote`.
+
+4. **VS Code workspace** автоматически отобразит все папки, указанные в `folders`, включая submodules.
+
+## Альтернативный способ (без submodules)
+
+Если по каким-то причинам вы не хотите использовать submodules, можно создать скрипт для клонирования:
+
+**`scripts/clone-repos.sh`** (для Linux/Mac):
+
+```bash
 #!/usr/bin/env bash
-# Clone or init/update submodules
+# Клонирование репозиториев без использования submodules
 set -e
-if [ -f .gitmodules ]; then
-  git submodule update --init --recursive
-else
-  # fallback — замените URL на реальные
-  [ -d main-app-repo ] || git clone git@gitea.example.com:org/main-app-repo.git main-app-repo
-  [ -d wiki-repo ]     || git clone git@gitea.example.com:org/wiki-repo.git wiki-repo
-fi
-echo "Готово. Откройте Main.code-workspace в VS Code."
-````
 
-````markdown
-# Как открыть workspace с двумя репозиториями
-
-Рекомендуемый способ:
-1. Клонировать этот репозиторий:
-   git clone --recurse-submodules git@gitea.example.com:org/Main.git
-2. Открыть Main.code-workspace в VS Code.
-
-Если вы не используете submodules:
-1. Запустить scripts/clone_repos.sh
-2. Открыть Main.code-workspace
-````
-
-Нужен ли создать эти файлы прямо сейчас и указать реальные URL репозиториев?
-
-KyaMovVM: Давай с подсказкой и не меняй имена папок, чтобы не сломалась структура. Ведь проект хранится в gitea 2 repos как Main and Main.wiki
-
-GitHub Copilot: Можно — оставив имена папок как есть (Main и Main.wiki). Предлагаю добавить submodule (рекомендуемый способ) + утилиту на случай, если кто-то не использует submodules. Набор файлов и команды ниже — готово к добавлению в репозиторий Main.
-
-Коротко:
-- Не переименовывать папки.
-- Сделать Main.wiki submodule внутри Main (путь Main.wiki).
-- Обновить Main.code-workspace, добавить скрипт для клона/инициализации и README-инструкцию.
-
-Файлы:
-
-````json
-[submodule "Main.wiki"]
-	path = Main.wiki
-	url = git@gitea.example.com:org/Main.wiki.git
-````
-
-````json
-{
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "Main.wiki"
-		}
-	],
-	"settings": {}
-}
-````
-
-````bash
-#!/usr/bin/env bash
-# Инициализация submodule или fallback-клон. Не менять имена папок.
-set -e
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT_DIR"
 
-if [ -f .gitmodules ]; then
-  echo "Инициализируем и обновляем submodules..."
-  git submodule update --init --recursive
-else
-  echo ".gitmodules не найден. Попытка клона по URL (замените на реальные адреса в скрипте)."
-  [ -d Main.wiki ] || git clone git@gitea.example.com:org/Main.wiki.git Main.wiki
-fi
+[ -d main-project ] || git clone http://192.168.0.104:3000/KyaMovVM/Main.git main-project
+[ -d wiki ] || git clone http://192.168.0.104:3000/KyaMovVM/Main.wiki.git wiki
 
-echo "Готово. Откройте Main.code-workspace в VS Code."
-````
+echo "Готово. Откройте kyaserver.code-workspace в VS Code."
+```
 
-````markdown
-# Workspace с двумя репозиториями (Main и Main.wiki)
+**`scripts/clone-repos.ps1`** (для Windows):
 
-Рекомендуемый способ (поддерживает корректное отображение обеих папок в VS Code):
-1. Клонировать репозиторий и сразу подтянуть submodules:
-   git clone --recurse-submodules git@gitea.example.com:org/Main.git
-2. Открыть Main/Main.code-workspace в VS Code.
+```powershell
+# Клонирование репозиториев без использования submodules
+$repoUrl = "http://192.168.0.104:3000/KyaMovVM"
 
-Если вы уже клонировали без submodules:
-1. В корне репо выполнить:
-   git submodule update --init --recursive
-   или
-   ./scripts/clone_repos.sh
+if (-not (Test-Path "main-project")) {
+    git clone "$repoUrl/Main.git" main-project
+}
 
-Важно: не менять имена папок — в workspace используются "Main" и "Main.wiki".
-````
+if (-not (Test-Path "wiki")) {
+    git clone "$repoUrl/Main.wiki.git" wiki
+}
 
-Короткие команды для настройки (в Main):
-- Добавить submodule (локально, затем push):
-  git submodule add git@gitea.example.com:org/Main.wiki.git Main.wiki
-  git add .gitmodules Main.wiki
-  git commit -m "Add Main.wiki as submodule"
-  git push
+Write-Host "Готово. Откройте kyaserver.code-workspace в VS Code."
+```
 
-Нужны ли реальные URL для .gitmodules и скрипта — подставлю их и создам файлы в репозитории.
+## Полезные команды
+
+```bash
+# Проверить статус всех submodules
+git submodule status
+
+# Посмотреть информацию о submodules
+git submodule
+
+# Перейти в submodule и работать с ним как с обычным репозиторием
+cd main-project
+git status
+git checkout -b feature-branch
+# ... работа ...
+git push origin feature-branch
+cd ..
+```
+
+## Troubleshooting
+
+### Submodule показывает как изменённый после клона
+
+Это нормально, если submodule указывает на коммит, который не является HEAD ветки. Чтобы обновить до последней версии:
+
+```bash
+git submodule update --remote
+```
+
+### Ошибка "fatal: reference is not a tree"
+
+Означает, что коммит, на который ссылается submodule, не существует. Обновите ссылку:
+
+```bash
+git submodule update --init --recursive --remote
+```
+
+### VS Code не видит файлы в submodule
+
+Убедитесь, что:
+
+1. Submodules инициализированы: `git submodule update --init --recursive`
+2. Workspace файл содержит правильные пути к папкам submodules
+3. Перезагрузите окно VS Code: `Ctrl+Shift+P` → "Reload Window"

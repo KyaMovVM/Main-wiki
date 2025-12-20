@@ -315,6 +315,7 @@ function massGreeting(person: Person[]){
 ad-hoc (Мнимый)
 
 ### Взаимодействие классов
+
 Композиция
 
 Класс автомобиль

@@ -39,28 +39,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "test-node.md",
+                "file": "1-overview.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "test-node"
-            }
-          },
-          {
-            "id": "c672947823e8c1f7",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.10.6"
-              },
-              "icon": "lucide-book-up",
-              "title": "примечания к выпуску 1.10.6"
+              "title": "1-overview"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -208,8 +196,11 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "c672947823e8c1f7",
+  "active": "1a7686a4882486c9",
   "lastOpenFiles": [
+    "Home.md",
+    "1-overview.md",
+    "test-node.md",
     "dev-containers.md",
     "new.base",
     "idea-submodule.md",
@@ -218,12 +209,10 @@
     "8-render.md",
     "7-event-loop.md",
     "3-api.md",
-    "1-overview.md",
     "13-algoritms.md",
     "5-protocols.md",
     "2-build.md",
     "Main.code-workspace",
-    "test-node.md",
     "scripts/runner.sh",
     "scripts",
     "Dockerfile",

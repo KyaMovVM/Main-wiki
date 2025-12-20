@@ -1,5 +1,7 @@
 Добро пожаловать в вики.
 
+[[1-overview.md]]
+
 Github Actions
 https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
 

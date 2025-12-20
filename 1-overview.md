@@ -1,7 +1,32 @@
-This project is a lightweight API service demonstrating the operation of Gitea,
-Act Runner, and Docker containers. The repository includes:
+# Обзор проекта KyaServer
 
-- `.gitea/workflows/` – CI/CD configurations.
-- `ssh scripts/` – PowerShell / Bash scripts for managing SSH keys.
-- `Test‑VRChat.sh` – An example test harness.
-- `README.md` – This document.
+KyaServer — это монорепозиторий для управления несколькими проектами, включая основное приложение, Docker-контейнеры и документацию.
+
+＠
+## Основные компоненты
+
+- **main-project/** — Git submodule с основным приложением (Main)
+- **wiki/** — Git submodule с документацией (Main.wiki)
+- **docker-projects/** — Коллекция Docker-контейнеров:
+  - `bindmount-apps/` — Приложение с bind mount
+  - `getting-started-app/` — Стартовое приложение с тестами
+  - `multi-container-app/` — Мультиконтейнерное приложение
+- **tests/** — Тесты корневого уровня
+- **compose.yaml** — Docker Compose для локального разворачивания
+- **Dockerfile** — Docker-образ для основного приложения
+
+## Технологии
+
+- **Node.js** — Основная платформа разработки
+- **Docker** — Контейнеризация приложений
+- **Jest** — Фреймворк для тестирования
+- **Gitea** — Система управления версиями и CI/CD
+- **Git Submodules** — Управление зависимостями между репозиториями
+
+## Структура репозиториев
+
+Проект использует несколько связанных репозиториев на Gitea:
+
+- Main — основное приложение
+- Main.wiki — документация
+- kyaserver — текущий монорепозиторий

@@ -105,16 +105,16 @@ Angular
 Svelte
 
 Сборка
-Webpack
-Vite
+    Webpack
+    Vite
 
 Управление состоянием:
-Redux
-MobX
-VueX
-Effector
+    Redux
+    MobX
+    VueX
+    Effector
 
 Server-side rendering:
-Nuxt
-NextJS
-NodeJS
+    Nuxt
+    NextJS
+    NodeJS
