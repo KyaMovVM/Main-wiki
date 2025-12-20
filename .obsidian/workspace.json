@@ -198,8 +198,9 @@
   },
   "active": "1a7686a4882486c9",
   "lastOpenFiles": [
-    "Home.md",
+    "11-oop.md",
     "1-overview.md",
+    "Home.md",
     "test-node.md",
     "dev-containers.md",
     "new.base",
@@ -218,7 +219,6 @@
     "Dockerfile",
     "src/test-node.js",
     "cleanup.ps1",
-    "11-oop.md",
     "10-markdown.md",
     "9-node.md",
     "6-browser.md",
