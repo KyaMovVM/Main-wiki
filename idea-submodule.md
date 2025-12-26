@@ -2,10 +2,10 @@
 
 ## Обзор
 
-Проект использует структуру с несколькими связанными репозиториями на Gitea:
+Проект использует структуру с несколькими связанными репозиториями на GitHub:
 
 - **Main** (`main-project/`) — основное приложение
-- **Main.wiki** (`wiki/`) — документация проекта
+- **Main-wiki** (`wiki/`) — документация проекта
 - **kyaserver** — монорепозиторий, объединяющий оба репозитория через Git submodules
 
 ## Структура репозиториев
@@ -25,11 +25,11 @@ kyaserver/                    # Главный репозиторий
 ```ini
 [submodule "main-project"]
     path = main-project
-    url = http://192.168.0.104:3000/KyaMovVM/Main.git
+    url = https://github.com/KyaMovVM/Main.git
 
 [submodule "wiki"]
     path = wiki
-    url = http://192.168.0.104:3000/KyaMovVM/Main.wiki.git
+    url = https://github.com/KyaMovVM/Main-wiki.git
 ```
 
 ### VS Code Workspace (`kyaserver.code-workspace`)
@@ -57,7 +57,7 @@ kyaserver/                    # Главный репозиторий
 **Рекомендуемый способ** (автоматически инициализирует все submodules):
 
 ```bash
-git clone --recurse-submodules http://192.168.0.104:3000/KyaMovVM/kyaserver.git
+git clone --recurse-submodules https://github.com/KyaMovVM/kyaserver.git
 cd kyaserver
 ```
 
@@ -94,7 +94,7 @@ git submodule update --remote wiki
 Если нужно добавить новый submodule:
 
 ```bash
-git submodule add http://192.168.0.104:3000/KyaMovVM/NewRepo.git path/to/new-repo
+git submodule add https://github.com/KyaMovVM/NewRepo.git path/to/new-repo
 git add .gitmodules path/to/new-repo
 git commit -m "Add NewRepo as submodule"
 git push
@@ -139,8 +139,8 @@ set -e
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT_DIR"
 
-[ -d main-project ] || git clone http://192.168.0.104:3000/KyaMovVM/Main.git main-project
-[ -d wiki ] || git clone http://192.168.0.104:3000/KyaMovVM/Main.wiki.git wiki
+[ -d main-project ] || git clone https://github.com/KyaMovVM/Main.git main-project
+[ -d wiki ] || git clone https://github.com/KyaMovVM/Main-wiki.git wiki
 
 echo "Готово. Откройте kyaserver.code-workspace в VS Code."
 ```
@@ -149,14 +149,14 @@ echo "Готово. Откройте kyaserver.code-workspace в VS Code."
 
 ```powershell
 # Клонирование репозиториев без использования submodules
-$repoUrl = "http://192.168.0.104:3000/KyaMovVM"
+$repoUrl = "https://github.com/KyaMovVM"
 
 if (-not (Test-Path "main-project")) {
     git clone "$repoUrl/Main.git" main-project
 }
 
 if (-not (Test-Path "wiki")) {
-    git clone "$repoUrl/Main.wiki.git" wiki
+    git clone "$repoUrl/Main-wiki.git" wiki
 }
 
 Write-Host "Готово. Откройте kyaserver.code-workspace в VS Code."
