@@ -1,8 +1,44 @@
 # Обзор проекта KyaServer
 
+WSL - Windows
+WSL - Server
+WSL - Ubuntu
+WSL - Docker?
+
+Свобода воли, черный ящик СМ1, алгоритмы и СМ2
+
+https://www.youtube.com/watch?v=v9ejT8FO-7I&list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc
+
+Декораторы
+https://www.youtube.com/watch?v=3tyaO-OE0K0
+
+https://www.youtube.com/watch?v=GWZf_B129zs
+
+https://www.youtube.com/watch?v=KZpYtNtGxSU
+
+На русском
+https://www.youtube.com/watch?v=d_zUrg6ELyE
+
+# Pydantic
+https://www.youtube.com/watch?v=XIdQ6gO3Anc
+
+GITEA LOCAL
+WSL
+NVIM?
+
+Справочная информация о проекте?
+
 KyaServer — это монорепозиторий для управления несколькими проектами, включая основное приложение, Docker-контейнеры и документацию.
 
-＠
+Цель:
+продумать все требования к системе.
+Продумать архитектуру.
+Система обязана быть отзывчивой?
+Как мы это узнаем?
+
+Разработка видётся основная на Python.
+Бэкенд на Node.js.
+
 ## Основные компоненты
 
 - **main-project/** — Git submodule с основным приложением (Main)

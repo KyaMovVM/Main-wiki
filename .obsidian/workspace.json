@@ -4,37 +4,81 @@
     "type": "split",
     "children": [
       {
-        "id": "4f92cf65c8d5245f",
+        "id": "823dd4d0c11c5519",
         "type": "tabs",
         "children": [
           {
-            "id": "08fa98f80e9c8505",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "empty",
-              "state": {},
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "Новая вкладка"
-            }
-          },
-          {
-            "id": "d59d9a986fbd0277",
+            "id": "67c8de9c91721fd5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11-oop.md",
+                "file": "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie/Расширяемость (Extendibility).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11-oop"
+              "title": "Расширяемость (Extendibility)"
             }
           },
           {
-            "id": "1a7686a4882486c9",
+            "id": "2f2f9d61cc54ae53",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Совместимость (Compatibility).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Совместимость (Compatibility)"
+            }
+          },
+          {
+            "id": "c9f4ff4edee425f2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie/Верифицируемость (Verifiability).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Верифицируемость (Verifiability)"
+            }
+          },
+          {
+            "id": "c3540c3fe78404ab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie/О документации.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "О документации"
+            }
+          },
+          {
+            "id": "3c6c3eee0a526337",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Расширяемость и повторное использование.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Расширяемость и повторное использование"
+            }
+          },
+          {
+            "id": "e0ca99ac131e7fd4",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -46,9 +90,75 @@
               "icon": "lucide-file",
               "title": "1-overview"
             }
+          },
+          {
+            "id": "74181d07a7e195b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Без названия 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Без названия 1"
+            }
+          },
+          {
+            "id": "4c7a410b0a7dca61",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Без названия 2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Без названия 2"
+            }
+          },
+          {
+            "id": "4d28afad945ee2ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SOLID.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SOLID"
+            }
+          },
+          {
+            "id": "0edcd249b91e9f0c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "tldraw.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "tldraw"
+            }
+          },
+          {
+            "id": "2c2399d53d4b41de",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Граф"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 10
       }
     ],
     "direction": "vertical"
@@ -105,7 +215,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "a3316cb664435f19",
@@ -121,7 +231,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie/Основы объектно-ориентированного программирования.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +241,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для README"
+              "title": "Обратные ссылки для Основы объектно-ориентированного программирования"
             }
           },
           {
@@ -169,13 +279,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "ToDoList/Требования.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура README"
+              "title": "Структура Требования"
             }
           }
         ]
@@ -196,48 +306,53 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "1a7686a4882486c9",
+  "active": "2c2399d53d4b41de",
   "lastOpenFiles": [
-    "11-oop.md",
+    "14-js.md",
+    "Без названия 3.md",
+    "SOLID.md",
+    "tldraw.md",
+    "Без названия 2.md",
+    "Без названия 1.md",
     "1-overview.md",
-    "Home.md",
-    "test-node.md",
-    "dev-containers.md",
-    "new.base",
-    "idea-submodule.md",
-    "fd",
-    "image-1.png",
-    "8-render.md",
-    "7-event-loop.md",
-    "3-api.md",
-    "13-algoritms.md",
-    "5-protocols.md",
+    "Расширяемость и повторное использование.md",
+    "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie/Основы объектно-ориентированного программирования.md",
+    "Math/math/1",
+    "Math/math",
+    "Books/gorshkovals_panzhenskiyvi_marinaev_proektivnaya_geometriya_pgpu_2003.pdf",
+    "Books/Kuhn-SSR-2ndEd.pdf",
+    "Books/mika-gym-8x.png.webp.thumbnail.webp",
     "2-build.md",
-    "Main.code-workspace",
-    "scripts/runner.sh",
-    "scripts",
-    "Dockerfile",
-    "src/test-node.js",
-    "cleanup.ps1",
-    "10-markdown.md",
-    "9-node.md",
-    "6-browser.md",
-    "4-rest.md",
-    "README.md",
-    "12-testing.md",
-    "GEMINI.md",
-    "crazy.md",
-    "lmstudio_models.js",
+    "Math/Гипотеза Ходжа.md",
+    "Books/Не подтвержден 125816.crdownload",
+    "Pasted image 20260125110714.png",
+    "Math",
+    "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie/Восстанавливаемость (Repairability).md",
+    "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie/Верифицируемость (Verifiability).md",
+    "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie/О программном сопровождении.md",
+    "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie/Расширяемость (Extendibility).md",
+    "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie/простота использования.md",
+    "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie/Устойчивость.md",
+    "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie/Функциональность (Functionality).md",
+    "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie/Экономичность (Economy) сочетается c своевременностью.md",
+    "Без названия.md",
+    "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie/О документации.md",
+    "Целостность (Integrity).md",
+    "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie/Своевременность (Timeliness).md",
+    "ToDoList/Требования.md",
+    "Разработка ПО/3-Предварительные условия.md",
+    "Эффективность (Efficiency).md",
+    "Разработка ПО/ertran_Meyer_Obektno-Orientirovannoe_Konstruirovanie",
+    "ToDoList",
+    "Books/Не подтвержден 429908.crdownload",
+    "Books",
+    "image-1.png",
     "Pasted image 20251113133809.png",
     "Pasted image 20251113104527.png",
     "image3.png",
     "image 3.png",
     "image2.png",
-    "EventLoopTest/index.js",
     "Pasted image 20251113064305.png",
-    "Pasted image 20251113064148.png",
-    "Untitled.md",
-    "Untitled 1.md",
-    "image.png"
+    "Pasted image 20251113064148.png"
   ]
 }
