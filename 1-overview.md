@@ -1,11 +1,35 @@
 # Обзор проекта KyaServer
 
+Obsidian view:
+	графы
+	флоу?
+	Алгоритмы?
+Figma view?
+VR view
+draw.io
+	интерактивность
+	псевдокод
+
+Мозговой штурм
+	Создать намерение
+		Требование
+			М
+
 WSL - Windows
 WSL - Server
 WSL - Ubuntu
 WSL - Docker?
 
-Свобода воли, черный ящик СМ1, алгоритмы и СМ2
+Winderton, S0erdevs
+
+https://www.dive.club/deep-dives/figma-prototyping
+
+# AI Roadmap
+#ai #roadmap 
+
+
+
+**Свобода воли** [[Дивергентность]] , черный ящик СМ1, алгоритмы и СМ2
 
 https://www.youtube.com/watch?v=v9ejT8FO-7I&list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc
 
